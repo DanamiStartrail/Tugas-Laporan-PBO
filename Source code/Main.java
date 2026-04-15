@@ -1,6 +1,15 @@
 class Mahasiswa {
     private String nama, nim, prodi;
+    private int semester = 1;
 
+    public void setSemester(int semester) {
+            if (semester < 1) {
+                System.out.println("Semester tidak valid!");
+            } else {
+                this.semester = semester;
+            }
+        }
+    public int getSemester() {return this.semester;}
     Mahasiswa(String nama, String nim, String prodi) {
         this.nama = nama;
         this.nim = nim;
@@ -28,15 +37,7 @@ class Mahasiswa {
         System.out.println("Semester: " + this.semester);
     }
 
-    private int semester;
-    public void setSemester(int semester) {
-        if (semester < 1) {
-            System.out.println("Semester tidak valid!");
-        } else {
-            this.semester = semester;
-        }
-    }
-    public int getSemester() {return this.semester;}
+    
     
 }
 
@@ -66,7 +67,8 @@ public class Main {
         Mahasiswa mhs1 = new Mahasiswa("Mandanta", "121140147", "Teknik Informatika", 4);
         Mahasiswa mhs2 = new Mahasiswa("Budi Utomo", "121140001", "Teknik Elektro", 2);
         Mahasiswa mhs3 = new Mahasiswa("Siti Aminah", "121140099", "Sains Data", 0);
-
+        
+        System.out.println("Informasi Mahasiswa:");
         mhs1.tampilkanInfo();
         mhs2.tampilkanInfo();
         mhs3.tampilkanInfo();
