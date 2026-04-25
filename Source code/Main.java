@@ -17,22 +17,49 @@ class Hewan{
 }
 
 class Kucing extends Hewan {
-    public Kucing(String nama, int umur) {
+    String ras;
+
+    public Kucing(String nama, int umur, String ras) {
         super(nama, umur);
+        this.ras = ras;
+    }
+    public void mengeong() {
+        System.out.println(nama + " sedang mengeong.");
+    }
+    public void berburu() {
+        System.out.println(nama + " sedang berburu.");
     }
 }
 
+class Anjing extends Hewan {
+    String jenisGolongan;
 
+    public Anjing(String nama, int umur, String jenisGolongan) {
+        super(nama, umur);
+        this.jenisGolongan = jenisGolongan;
+    }
+    public void menggonggong() {
+        System.out.println(nama + " sedang menggonggong.");
+    }
+    public void bermain() {
+        System.out.println(nama + " sedang bermain.");
+    }
+}
+
+class GoldenRetriever extends Anjing {
+    public GoldenRetriever(String nama, int umur) {
+        super(nama, umur, "Golden Retriever");
+    }
+    public void berenang() {
+        System.out.println(nama + " sedang berenang.");
+    }
+    public void mengambil() {
+        System.out.println(nama + " sedang mengambil bola.");
+    }
+}
 
 public class Main {
     public static void main(String[] args) {
-        Hewan kucing = new Hewan("Kucing", 3);
-        Hewan anjing = new Hewan("Anjing", 5);
-
-        kucing.makan();
-        kucing.tidur();
-
-        anjing.makan();
-        anjing.tidur();
+        
     }
 }
