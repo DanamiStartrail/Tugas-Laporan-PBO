@@ -60,6 +60,12 @@ class GoldenRetriever extends Anjing {
 
 public class Main {
     public static void main(String[] args) {
-        
+        GoldenRetriever anj1 = new GoldenRetriever("Gold Roger", 5);
+        anj1.makan();
+        anj1.tidur();
+        anj1.menggonggong();
+        anj1.bermain();
+        anj1.berenang();
+        anj1.mengambil();
     }
 }
